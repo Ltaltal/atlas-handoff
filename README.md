@@ -1,11 +1,11 @@
 # Atlas — Design Handoff
 
-A demo of a code-based design handoff, built around a **fictional product**.
+A template for code-based design handoffs, with a **worked example** built in.
 
-Atlas is a made-up workspace-management app. Everything here — the product, the
-feature, the people, the copy, the measurements and the sample data — is
-invented for illustration. It exists to show *how* a handoff can be structured,
-not to document any real product.
+Atlas is an example workspace-management feature — the product, the copy, the
+measurements and the sample data are illustrative, there to make the structure
+concrete. You keep the template and replace the example with your own feature:
+the pages, cross-links, specs and boards stay, and the content becomes yours.
 
 ```bash
 yarn
@@ -103,7 +103,7 @@ src/
   _lib/        the handoff kit — flow player, journey map, redlines,
                spec pane, notes and links boards, cross-page navigation
   discovery/   the only bundler-specific code
-  features/    the fictional Atlas content
+  features/    the example Atlas content
 ```
 
 A feature is a folder under `src/features/<id>/`:
