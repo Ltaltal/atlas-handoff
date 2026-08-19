@@ -1,0 +1,37 @@
+{
+  "$schema": "../../../schemas/links.schema.json",
+  "links": [
+    {
+      "id": "l-spec",
+      "kind": "spec",
+      "label": "Workspace creation — product spec",
+      "url": "https://example.com/atlas/specs/workspace-creation",
+      "note": "Scope, requirements and what is explicitly out of scope.",
+      "owner": "Devon Park"
+    },
+    {
+      "id": "l-research",
+      "kind": "research",
+      "label": "Onboarding study — round 2",
+      "url": "https://example.com/atlas/research/onboarding-round-2",
+      "note": "Where the stepped structure came from.",
+      "owner": "Priya Nair"
+    },
+    {
+      "id": "l-design",
+      "kind": "design",
+      "label": "Create a workspace — design file",
+      "url": "https://example.com/atlas/design/create-a-workspace",
+      "note": "Source frames for every screen in this handoff.",
+      "owner": "Rowan Ellis"
+    },
+    {
+      "id": "l-ticket",
+      "kind": "ticket",
+      "label": "ATL-1420 — Build the workspace creation flow",
+      "url": "https://example.com/atlas/tickets/ATL-1420",
+      "note": "Engineering epic, split by step.",
+      "owner": "Devon Park"
+    }
+  ]
+}

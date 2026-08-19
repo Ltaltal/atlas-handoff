@@ -1,0 +1,66 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Handoff interview",
+  "description": "The questions asked of someone starting a feature. Defined once here and read by all three surfaces that ask them: the terminal scaffolder, the Getting started page, and the generated agent prompt. Three copies of a question list is three chances to drift.",
+  "type": "object",
+  "required": ["title", "questions"],
+  "additionalProperties": false,
+  "properties": {
+    "$schema": { "type": "string" },
+    "title": {
+      "type": "string",
+      "description": "Heading for the interview, used by every surface."
+    },
+    "summary": {
+      "type": "string",
+      "description": "One paragraph setting expectations about how much this covers."
+    },
+    "questions": {
+      "type": "array",
+      "items": { "$ref": "#/definitions/question" }
+    }
+  },
+  "definitions": {
+    "question": {
+      "type": "object",
+      "required": ["id", "ask", "why", "kind", "required"],
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z][a-zA-Z0-9]*$",
+          "description": "Field name in the collected answers. Unique within the file."
+        },
+        "ask": {
+          "type": "string",
+          "description": "The question itself, phrased as it is put to a person."
+        },
+        "why": {
+          "type": "string",
+          "description": "What the answer becomes. Shown alongside the question, because a question you understand the point of gets a better answer."
+        },
+        "kind": {
+          "enum": ["text", "paragraph", "choice", "list"],
+          "description": "How the answer is collected. 'list' is comma separated."
+        },
+        "options": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "The allowed answers. Required when kind is 'choice'."
+        },
+        "initial": {
+          "type": "string",
+          "description": "Default answer, offered rather than assumed."
+        },
+        "placeholder": {
+          "type": "string",
+          "description": "An example answer, so the shape of a good one is obvious."
+        },
+        "required": {
+          "type": "boolean",
+          "description": "Whether the feature can be scaffolded without it."
+        }
+      }
+    }
+  }
+}

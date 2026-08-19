@@ -1,0 +1,39 @@
+{
+  "$schema": "./interview.schema.json",
+  "title": "Start a feature",
+  "summary": "Four answers is enough to make a feature that renders. Status, the steps of a flow, components and notes are all things you add once you know them.",
+  "questions": [
+    {
+      "id": "title",
+      "ask": "What is the feature called?",
+      "why": "Becomes the folder id and the name everywhere in the handoff.",
+      "kind": "text",
+      "placeholder": "Invite teammates",
+      "required": true
+    },
+    {
+      "id": "description",
+      "ask": "One line: what is it?",
+      "why": "Shown on the overview tile, so it has to make sense on its own.",
+      "kind": "text",
+      "placeholder": "Add people to a workspace and choose what they can do.",
+      "required": true
+    },
+    {
+      "id": "designer",
+      "ask": "Who is designing it?",
+      "why": "Named on the feature so a reader knows who to ask.",
+      "kind": "text",
+      "placeholder": "Rowan Ellis",
+      "required": false
+    },
+    {
+      "id": "problem",
+      "ask": "What problem does it solve?",
+      "why": "Becomes the Context page \u2014 the one thing a handoff is most often missing.",
+      "kind": "paragraph",
+      "placeholder": "Sharing a workspace means sending a link and hoping. There is no way to see who has access.",
+      "required": true
+    }
+  ]
+}

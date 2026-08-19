@@ -1,0 +1,86 @@
+{
+  "$schema": "../../../schemas/notes.schema.json",
+  "notes": [
+    {
+      "id": "n-progressive",
+      "kind": "decision",
+      "title": "Progressive configuration",
+      "body": "Ask for what is needed to create the workspace, and defer everything else until it exists. Most of the original form could not be answered on day one, so deferring those fields removes the guessing without removing the settings. The cost: people who do know their settings up front have to visit the workspace once more.",
+      "author": "Rowan Ellis",
+      "date": "2026-03-12",
+      "affects": [
+        "Screens",
+        "User flow"
+      ]
+    },
+    {
+      "id": "n-inline",
+      "kind": "decision",
+      "title": "Inline validation",
+      "body": "Show a problem next to the field that caused it, while the person is still looking at it. A summary at the top of the step made people scroll away from the thing they had to fix. The cost: every field reserves a line for its message, so steps are slightly taller.",
+      "author": "Rowan Ellis",
+      "date": "2026-03-12",
+      "affects": [
+        "NameField"
+      ]
+    },
+    {
+      "id": "n-nothing-before-review",
+      "kind": "decision",
+      "title": "Nothing is created before Review",
+      "body": "Leaving the flow at any point before Review leaves no trace. Draft workspaces from an earlier prototype were never cleaned up and cluttered the switcher. The cost: progress is lost if the tab is closed mid-flow.",
+      "author": "Devon Park",
+      "date": "2026-03-19",
+      "affects": [
+        "User flow"
+      ]
+    },
+    {
+      "id": "n-convert",
+      "kind": "question",
+      "title": "Can a personal workspace become a team workspace later?",
+      "body": "If it can, the choice at step 1 stops being significant and the copy should say so. If it cannot, step 1 needs a warning we do not have yet.",
+      "author": "Rowan Ellis",
+      "date": "2026-03-20",
+      "status": "needs a decision",
+      "affects": [
+        "OptionCard"
+      ]
+    },
+    {
+      "id": "n-taken-late",
+      "kind": "question",
+      "title": "What if the name is taken between Review and Create?",
+      "body": "Returning to step 1 is the current assumption, but nobody has confirmed that the rest of the form survives the trip back.",
+      "author": "Devon Park",
+      "date": "2026-03-21",
+      "status": "needs research",
+      "affects": [
+        "NameField"
+      ]
+    },
+    {
+      "id": "n-skip-risk",
+      "kind": "risk",
+      "title": "A skipped Configure step leaves a workspace with no members",
+      "body": "Skipping gives a Private workspace nobody else can see. That may be exactly right for a personal workspace and quietly wrong for a team one. We have no reminder afterwards either way.",
+      "author": "Priya Nair",
+      "date": "2026-03-24",
+      "status": "watching",
+      "affects": [
+        "User flow"
+      ]
+    },
+    {
+      "id": "n-short-steps",
+      "kind": "note",
+      "title": "Four short steps tested better than one long form",
+      "body": "Both versions took about the same time end to end, but people resumed the stepped version far more reliably after being interrupted.",
+      "author": "Priya Nair",
+      "date": "2026-03-05",
+      "affects": [
+        "SetupStepper"
+      ]
+    }
+  ]
+}

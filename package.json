@@ -1,0 +1,32 @@
+{
+  "name": "atlas-handoff",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Atlas \u2014 a fictional workspace product. A demo of a code-based design handoff.",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "handoff:new": "node scripts/new-feature.mjs",
+    "handoff:validate": "node scripts/validate-content.mjs"
+  },
+  "dependencies": {
+    "@astryxdesign/core": "^0.3.0",
+    "@astryxdesign/theme-neutral": "^0.3.0",
+    "@stylexjs/stylex": "^0.19.0",
+    "lucide-react": "^1.31.0",
+    "react": "^19",
+    "react-dom": "^19"
+  },
+  "devDependencies": {
+    "@astryxdesign/cli": "^0.3.0",
+    "@types/node": "^20.14.0",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "@vitejs/plugin-react": "^4.3.1",
+    "typescript": "^5.5.4",
+    "vite": "^5.4.0"
+  }
+}
